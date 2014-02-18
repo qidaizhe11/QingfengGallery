@@ -30,4 +30,22 @@ int main(int argc, char *argv[])
   if (!cnf_dir.exists()) {
     cnf_dir.mkpath("/mnt/sdcard/mygallery");
   }
+
+  QApplication app(argc, argv);
+  app.setApplicationName("MyGallery");
+
+  QStringList args = app.arguments();
+  if (args.count() == 1) {
+    args << "/mnt/sdcard/image/";
+  }
+
+  for (int i = 1; i < args.count(); ++i) {
+    QString argument_str = args.at(1);
+    if (!QFileInfo(argument_str).isRelative()) {
+      continue;
+    }
+
+    argument_str = QDir::currentPath() + "/" + argument_str;
+    args.replace(i, argument_str);
+  }
 }
