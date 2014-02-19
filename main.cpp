@@ -6,6 +6,11 @@
 #include <QDir>
 #include <QDebug>
 
+#include "DropArea.h"
+#include "MyGallery.h"
+#include "ThumbnailBarItem.h"
+#include "Settings.h"
+
 //int main(int argc, char *argv[])
 //{
 //    QGuiApplication app(argc, argv);
@@ -48,4 +53,30 @@ int main(int argc, char *argv[])
     argument_str = QDir::currentPath() + "/" + argument_str;
     args.replace(i, argument_str);
   }
+
+  MyGallery* window = new MyGallery();
+
+  if (args.count() == 2) {
+    QString argument_str = args.at(1);
+    QString dir_str = argument_str;
+    QFileInfo file(argument_str);
+    if (!file.isDir()) {
+      dir_str = file.dir().path();
+    }
+
+    window->autoAdd(dir_str,
+                    (argument_str == dir_str) ? QString() : argument_str);
+  } else {
+    for (int i = 1; i < args.count(); ++i) {
+      window->autoAdd(args.at(i));
+    }
+  }
+
+  QObject::connect(&app, SIGNAL(messageReceived(QString)),
+                   window, SLOT(add(QString)));
+
+  window->setWindowIcon(":/pics.icon.png");
+  window->showFullScreen();
+
+  return app.exec();
 }
