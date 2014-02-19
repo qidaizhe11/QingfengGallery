@@ -14,7 +14,8 @@ SOURCES += main.cpp \
     Settings.cpp \
     ThumbnailBarItem.cpp \
     MyGalleryViewer.cpp \
-    ImageProvider.cpp
+    ImageProvider.cpp \
+    MyGalleryColors.cpp
 
 # Installation path
 # target.path =
@@ -28,4 +29,6 @@ HEADERS += \
     Settings.h \
     ThumbnailBarItem.h \
     MyGalleryViewer.h \
-    ImageProvider.h
+    ImageProvider.h \
+    MyGallery_global.h \
+    MyGalleryColors.h
