@@ -7,7 +7,7 @@
 
 class Settings;
 class ThumbnailBarItem;
-class MyGalleryViewPrivate;
+class MyGalleryViewerPrivate;
 
 class MyGalleryViewer : public QDeclarativeView
 {
@@ -74,7 +74,7 @@ protected:
   void resizeEvent(QResizeEvent* event);
 
 private:
-  MyGalleryViewPrivate* p;
+  MyGalleryViewerPrivate* p;
 };
 
 #endif // MYGALLERYVIEWER_H
