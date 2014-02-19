@@ -13,7 +13,8 @@ SOURCES += main.cpp \
     MyGallery.cpp \
     Settings.cpp \
     ThumbnailBarItem.cpp \
-    MyGalleryViewer.cpp
+    MyGalleryViewer.cpp \
+    ImageProvider.cpp
 
 # Installation path
 # target.path =
@@ -26,4 +27,5 @@ HEADERS += \
     MyGallery.h \
     Settings.h \
     ThumbnailBarItem.h \
-    MyGalleryViewer.h
+    MyGalleryViewer.h \
+    ImageProvider.h
