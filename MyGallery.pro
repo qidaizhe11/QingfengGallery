@@ -38,3 +38,6 @@ HEADERS += \
     silicon/sstring.h \
     silicon/sstringlist.h \
     DropArea.h
+
+OTHER_FILES += \
+    README.md
