@@ -101,7 +101,9 @@ MyGalleryViewer::MyGalleryViewer(QWidget *parent) :
   p->root->setContextProperty("Settings", p->settings);
 
   qmlRegisterType<DropArea>("com.mygallery.droparea", 1, 0, "DropArea");
-  setSource(QUrl("qrc:/mygallery/qml/main.qml"));
+  setSource(QUrl("qrc:/mygallery/qml/MyGallery/main.qml"));
+//    viewer.setMainQmlFile(QStringLiteral("qml/MyGallery/main.qml"));
+
 
   p->thumnailbar = rootObject()->findChild<QObject*>("thumbnailbar");
 
