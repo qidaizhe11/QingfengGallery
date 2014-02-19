@@ -15,7 +15,9 @@ SOURCES += main.cpp \
     ThumbnailBarItem.cpp \
     MyGalleryViewer.cpp \
     ImageProvider.cpp \
-    MyGalleryColors.cpp
+    MyGalleryColors.cpp \
+    silicon/sstring.cpp \
+    silicon/sstringlist.cpp
 
 # Installation path
 # target.path =
@@ -31,4 +33,6 @@ HEADERS += \
     MyGalleryViewer.h \
     ImageProvider.h \
     MyGallery_global.h \
-    MyGalleryColors.h
+    MyGalleryColors.h \
+    silicon/sstring.h \
+    silicon/sstringlist.h
