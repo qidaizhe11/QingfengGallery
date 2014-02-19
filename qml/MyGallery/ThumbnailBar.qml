@@ -151,4 +151,38 @@ Rectangle {
         thumbnailbar.preview(index)
         thumbnailbar.fancy = true
     }
+
+    ImageButton {
+        id: rotate_left
+        source: "image://pixmaps/rotate-left"
+        width: 18
+        height: 18
+        anchors.top: thumbnailbar.top
+        anchors.left: thumbnailbar.left
+        anchors.topMargin: 10
+        anchors.leftMargin: 50
+        smooth: true
+        z: 101
+        visible: (on_preview != -1 && !android)
+
+        onClicked: rotateLeft()
+//        onExited: to
+//        onEntered: {
+    }
+
+    ImageButton {
+        id: rotate_right
+        source: "image://pixmaps/rotate-right"
+        width: 18
+        height: 18
+        anchors.top: thumbnailbar.top
+        anchors.left: thumbnailbar.left
+        anchors.topMargin: 10
+        anchors.leftMargin: 78
+        smooth: true
+        z: 101
+        visible: (on_preview != -1 && !android)
+
+        onClicked: rotateRight()
+    }
 }
