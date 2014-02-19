@@ -17,7 +17,8 @@ SOURCES += main.cpp \
     ImageProvider.cpp \
     MyGalleryColors.cpp \
     silicon/sstring.cpp \
-    silicon/sstringlist.cpp
+    silicon/sstringlist.cpp \
+    DropArea.cpp
 
 # Installation path
 # target.path =
@@ -35,4 +36,5 @@ HEADERS += \
     MyGallery_global.h \
     MyGalleryColors.h \
     silicon/sstring.h \
-    silicon/sstringlist.h
+    silicon/sstringlist.h \
+    DropArea.h
